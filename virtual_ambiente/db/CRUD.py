@@ -1,5 +1,5 @@
 from db.models import Pessoa
-from .models import session
+from db.models import session
 from sqlalchemy import extract
 
 class UsersRepository:

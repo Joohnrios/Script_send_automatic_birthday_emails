@@ -6,7 +6,7 @@ from datetime import datetime
 
 
 Base = declarative_base()
-engine = create_engine('sqlite:///banco.db', echo=False)
+engine = create_engine('sqlite:///banco.db', echo=True)
 Session = sessionmaker(bind=engine)
 session = Session()  # Criando uma sessão (add, commit, query, etc).
 
@@ -17,7 +17,7 @@ class Pessoa(Base):
     
     id = Column(Integer, primary_key=True, autoincrement=True) # autoincrement serve para o valor de um campo ser inserido automaticamente, toda vez q for criado.
     name = Column(String(40), index=True) # Index = Onde irá fazer mais buscas no banco.
-    email = Column(String(20), nullable=False) # Nullable = Não pode ficar vazio.
+    email = Column(String(20), nullable=False, unique=True) # Nullable = Não pode ficar vazio.
     birthdate = Column(Date, nullable=False)
     created_id = Column(DateTime(), default=datetime.now)
     updated_id = Column(DateTime(), default=datetime.now, onupdate=datetime.now)

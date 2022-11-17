@@ -4,7 +4,7 @@ from pprint import pprint
 
 crud_user = UsersRepository()
 
-usuario_criado = crud_user.create(nome='Fabricio', email='fabricio@hotmail.com', aniversario=date(1997, 8, 31))
+usuario_criado = crud_user.create(nome='John', email='joohnrios@hotmail.com', aniversario=date(1997, 8, 31))
 print()
 print('criacao', usuario_criado)
 print('-'*150)

@@ -20,7 +20,7 @@ while True:
     if resposta == '1':
         input_name = input('Digite um nome: ')
         input_email = input('Digite um email: ')
-        input_birthdate = input('Digite sua data de nascimento Ex: 31/08/1997 ')
+        input_birthdate = input('Digite sua data de nascimento Ex: dd/mm/aaaa ')
         input_birthdate = formata_data(input_birthdate)
         if not len(input_birthdate) == 3:
             print('Data incorreta, por favor informe do jeito certo!')
