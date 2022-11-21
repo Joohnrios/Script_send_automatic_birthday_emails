@@ -12,3 +12,16 @@ Projeto para o envio automático de emails de aniversário usando o módulo smtp
 - SQL Alchemy
 - SQLite
 - SMTPLIB module
+
+# EN:
+
+🔨 Brief description:
+Project for the automatic sending of birthday emails using the smtplib module and the SQL Alchemy ORM for database manipulation and modeling (SQLite).
+
+✔️ Techniques and technologies used:
+- Python
+- SQL Alchemy
+- SQLite
+- SMTPLIB module
+
+OBS: Sorry my english, I'm learning! Cya, guys! :D
