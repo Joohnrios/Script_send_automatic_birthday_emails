@@ -9,5 +9,5 @@ def events_birthdate():
 
     for aniversariante in aniversariantes:
         enviar_email(name=aniversariante.name, email_usuario=aniversariante.email)
-        print('Email enviado com sucesso!')
-    print('Todos os emails foram enviados.')
+        print('Email successfully sent!')
+    print('All emails have been sent.')
