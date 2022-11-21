@@ -3,7 +3,7 @@ from datetime import date
 
 
 crud_user = UsersRepository()
-def formata_data(data):
+def format_data(data):
     try:
 
         return data.split('/')
@@ -13,23 +13,23 @@ def formata_data(data):
 
 
 while True:
-    resposta = input('Digite 1 para cadastrar um novo usuário ou 0 para sair: ')
+    resposta = input('Type 1 to register a new user or 0 to leave: ')
     if not resposta.isnumeric():
-        print('Valor digitado incorreto')
+        print('Wrong entered value')
         continue
     if resposta == '1':
-        input_name = input('Digite um nome: ')
-        input_email = input('Digite um email: ')
-        input_birthdate = input('Digite sua data de nascimento Ex: dd/mm/aaaa ')
+        input_name = input('Enter a name: ')
+        input_email = input('Enter an email: ')
+        input_birthdate = input('Enter your birthdate: (dd/mm/yyyy) ')
         input_birthdate = formata_data(input_birthdate)
         if not len(input_birthdate) == 3:
-            print('Data incorreta, por favor informe do jeito certo!')
+            print('Incorrect date, please inform correctly!')
             continue
         input_birthdate = date(int(input_birthdate[2]), int(input_birthdate[1]), int(input_birthdate[0]))
         usuario_criado = crud_user.create(
             nome=input_name, email=input_email, aniversario=input_birthdate)
         if usuario_criado.id:
-            print('Usuário criado com sucesso.')
+            print('User created successfully.')
     else:
-        print('Saindo do programa...')
+        print('Leaving the program...')
         break
