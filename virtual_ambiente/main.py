@@ -4,4 +4,4 @@ from time import sleep
 
 while True:
     events_birthdate()
-    sleep(86400) # Vai contar 24h a partir do momento em que for iniciado.
+    sleep(86400) # Vai contar 24h a partir do momento em que for iniciado. EN: # Will count 24h from the moment it starts.
