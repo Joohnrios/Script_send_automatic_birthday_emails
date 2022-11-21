@@ -24,7 +24,7 @@ class User(Base):
 
 
     def __repr__(self):  # Quando for printar um elemento, o método é chamado pra aparecer na tela mais legível. # When printing an element, the method is called to appear on the screen more readable.
-        return f'Pessoa (id={self.id}, name={self.name}, email={self.email}, birthday={self.birthdate})'
+        return f'User (id={self.id}, name={self.name}, email={self.email}, birthday={self.birthdate})'
 
     # Construtor = Utilizando o construtor para passar os valores no momento em que a classe é instanciada. :param name: (str)/ :param email: (str)/ :param birthday: (Date)
     def __init__(self, name, email, birthdate):
